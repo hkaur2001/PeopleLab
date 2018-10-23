@@ -2,25 +2,26 @@ public class Classroom extends Person
 {
     private Student[] students;
     private Teacher teacher;
-    public Classroom (Teacher teacher, Student[] students)
+    public void Classroom (Teacher teacher, Student[] students)
     {
         this.teacher = teacher; // They have to match as they're initializing that value for that variable.
         this.students = students;
     }
     public String getSubject()
     {
-        return teacher.getSubject;
+        return teacher.getSubject();
     }
     public double classAverage()
     {
         double x = 0;
         for (Student cur : students)
         {
-            x += getGPA(cur);
+            x += cur.getGPA();
         }
         x =  x/students.length;
+        return x;
     }
-    public printClass()
+    public void printClass()
     {
         System.out.println(teacher);
         System.out.println(getSubject());
