@@ -15,7 +15,7 @@ public class Student extends Person
         this.gradeLevel = gradeLevel;
     }
 
-    public double getGpa()
+    public double getGPA()
     {
         return GPA;
     }
