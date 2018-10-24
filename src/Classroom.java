@@ -2,6 +2,12 @@ public class Classroom extends Person
 {
     private Student[] students;
     private Teacher teacher;
+
+    public Classroom(String firstName, String familyName) {
+        super(firstName, familyName);
+    }
+
+
     public void Classroom (Teacher teacher, Student[] students)
     {
         this.teacher = teacher; // They have to match as they're initializing that value for that variable.
