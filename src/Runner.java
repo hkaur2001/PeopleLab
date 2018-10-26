@@ -1,15 +1,27 @@
 public class Runner
 {
-    public static void main(String [] args)
+
+    static String firstNames[] = { "Scrooge ", "Ben ", "Bob ", "Alex ", "Harold "};
+    static String familyNames[] = {"Mcduck", "Mcdonald", "Smith", "Buttons", "Firefly"};
+
+    public static void main (String [] args)
     {
-        Student student1 = new Student("Lee ", "Majors", 4.0, 23901, 2);
-        Teacher teacher1 = new Teacher("math", "Lee", "Mr");
-        Classroom classroom1 = new Classroom("Harold", "Kumar");
+        String [] randomNames = new String [firstNames.length];
+        for(int i = 0; i < firstNames.length; i++)
+        {
+            double x = Math.random();
+            int num = (int)(x * 5);
+            randomNames[i] = firstNames[num] + familyNames[num];
+        }
+        Student [] students = new Student [firstNames.length];
+        for(int i = 0; i < firstNames.length; i++)
+        {
+            students[i] = randomNames[i];
+        }
+        Teacher teacher= new Teacher ("APCSP", "Levin", "Mr");
+        Classroom classroom = new Classroom (teacher , "APCSP", students);
+        System.out.println(classroom);
 
-        System.out.println(teacher1);
-        System.out.println(classroom1);
     }
-
-    public static S
 
 }
