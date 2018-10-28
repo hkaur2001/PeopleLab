@@ -1,14 +1,9 @@
-public class Classroom extends Person
+public class Classroom
 {
     private Student[] students;
     private Teacher teacher;
 
-    public Classroom(String firstName, String familyName) {
-        super(firstName, familyName);
-    }
-
-
-    public void Classroom (Teacher teacher, Student[] students)
+    public Classroom (Teacher teacher, Student[] students)
     {
         this.teacher = teacher; // They have to match as they're initializing that value for that variable.
         this.students = students;
@@ -31,10 +26,9 @@ public class Classroom extends Person
     {
         System.out.println(teacher);
         System.out.println(getSubject());
-        for (Student everyone : students) // That is the array then any variable which is checked against the value of the array
-        // in this case students.
+        for (int i = 0; i < students.length; i++)
         {
-            System.out.println(students);
+            System.out.println(students[i]);
         }
     }
 
